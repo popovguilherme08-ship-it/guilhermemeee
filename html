@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bolhas e Balões - ADS SENAI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Nuvens Animadas ao Fundo -->
+  <div class="clouds-container">
+    <div class="cloud c1"></div>
+    <div class="cloud c2"></div>
+    <div class="cloud c3"></div>
+  </div>
+
+  <!-- Tela do Menu Inicial -->
+  <div id="mainMenu" class="menu-overlay">
+    <div class="menu-card">
+      <h1>🎈 Bolhas e Balões</h1>
+      <p class="subtitle">Projeto Educativo - ADS SENAI</p>
+      
+      <div class="menu-buttons">
+        <button id="btnStartFree" class="menu-btn primary">🌟 Modo Livre</button>
+        <button id="btnStartColor" class="menu-btn secondary">🎨 Modo Cores</button>
+        <button id="btnOpenCredits" class="menu-btn credits-btn">👥 Créditos</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Créditos -->
+  <div id="creditsModal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <h2>Créditos do Projeto</h2>
+      <p>Desenvolvido com carinho para o projeto de ADS no SENAI por:</p>
+      <ul class="names-list">
+        <li>✨ Angelo</li>
+        <li>✨ Carol</li>
+        <li>✨ Camila</li>
+        <li>✨ Guilherme</li>
+      </ul>
+      <button id="btnCloseCredits" class="menu-btn primary">Voltar</button>
+    </div>
+  </div>
+
+  <!-- Cabeçalho do Jogo (durante a partida) -->
+  <header class="header hidden" id="gameHeader">
+    <div class="header-content">
+      <button id="btnBackMenu" class="btn home-btn">🏠 Menu</button>
+      <div class="controls">
+        <button id="btnSound" class="btn sound-btn" aria-label="Alternar Som">🔊</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Barra de Instruções (Modo Cores) -->
+  <div id="targetBar" class="target-bar hidden">
+    <span class="target-text">Estoure o balão: <strong id="targetColorName">Vermelho</strong></span>
+    <span id="targetBadge" class="target-badge"></span>
+    <button id="btnSpeakTarget" class="btn-speaker" title="Ouvir instrução">🔊 Ouvir</button>
+  </div>
+
+  <!-- Área Onde os Balões Aparecem -->
+  <main id="gameCanvas" class="game-canvas hidden"></main>
+
+  <!-- Rodapé / Placar -->
+  <footer class="footer hidden" id="gameFooter">
+    <div class="score-card">
+      <span class="score-label">Estourados:</span>
+      <span id="scoreCounter" class="score-val">0</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
